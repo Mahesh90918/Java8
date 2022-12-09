@@ -1,24 +1,24 @@
 package com.array;
 
+import java.util.Arrays;
+
 public class SecondHighestValue {
-	public static int getSecondLargest(int[] a, int total){  
-		int temp;  
-		for (int i = 0; i < total; i++)   
-		        {  
-		            for (int j = i + 1; j < total; j++)   
-		            {  
-		                if (a[i] > a[j])   
-		                {  
-		                    temp = a[i];  
-		                    a[i] = a[j];  
-		                    a[j] = temp;  
-		                }  
-		            }  
-		        }  
-		       return a[total-2];  
-		}  
+	public static int getSecondLargest(int[] a) {
+		int total = a.length;
+		Arrays.sort(a);
+		int second = 0;
+		for (int i = total - 2; i >= 0; i--) {
+			if (a[i] != a[total - 1]) {
+				second = a[i];
+				return second;
+			}
+		}
+		return second;
+
+	}
+
 	public static void main(String[] args) {
-		int [] a= {1,2,3,4,5,2,1};
-		System.out.println(getSecondLargest(a, 7));
+		int[] a = { 10, 64, 30, 43, 60, 98, 98 };
+		System.out.println(getSecondLargest(a));
 	}
 }
