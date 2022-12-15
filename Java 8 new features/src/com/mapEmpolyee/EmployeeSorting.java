@@ -11,6 +11,10 @@ public class EmployeeSorting {
 		System.out.println("***********NAME Sorting****************");
 		emp.getEmpolyee().entrySet().stream().sorted((o1, o2) -> o1.getKey().getName().compareTo(o2.getKey().getName()))
 				.forEach(System.out::println);
+		System.out.println("***********NAME Sorting Revese****************");
+		emp.getEmpolyee().entrySet().stream()
+				.sorted(Map.Entry.comparingByKey(Comparator.comparing(Employee::getName).reversed()))
+				.forEach(System.out::println);
 
 		System.out.println("***********SALARY Sorting****************");
 		emp.getEmpolyee().entrySet().stream()
@@ -36,17 +40,17 @@ public class EmployeeSorting {
 				.forEach(t -> System.out.println(t));
 		System.out.println("-----------------Name 1 reverse------------------");
 		emp.getEmpolyee().entrySet().stream()
-		.sorted(Map.Entry.comparingByKey(Comparator.comparing(Employee::getName).reversed()))
-		.forEach(t -> System.out.println(t));
+				.sorted(Map.Entry.comparingByKey(Comparator.comparing(Employee::getName).reversed()))
+				.forEach(t -> System.out.println(t));
 		System.out.println("------------+++NAME 2+++---------------------");
 		emp.getEmpolyee().entrySet().stream().sorted(Map.Entry.comparingByKey(Comparator.comparing(Employee::getName)))
 				.forEach(t -> System.out.println(t));
 		System.out.println("------------+++Reverse Order 2+++---------------------");
-		emp.getEmpolyee().entrySet().stream().sorted(Map.Entry.comparingByKey(Comparator.comparing(Employee::getName).reversed()))
+		emp.getEmpolyee().entrySet().stream()
+				.sorted(Map.Entry.comparingByKey(Comparator.comparing(Employee::getName).reversed()))
 				.forEach(t -> System.out.println(t));
 		System.out.println("------------+++value 2+++---------------------");
-		emp.getEmpolyee().entrySet().stream().sorted(Map.Entry.comparingByValue())
-				.forEach(t -> System.out.println(t));
+		emp.getEmpolyee().entrySet().stream().sorted(Map.Entry.comparingByValue()).forEach(t -> System.out.println(t));
 
 	}
 }
