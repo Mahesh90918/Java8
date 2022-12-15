@@ -34,6 +34,10 @@ public class EmployeeSorting {
 		emp.getEmpolyee().entrySet().stream()
 				.sorted(Map.Entry.comparingByKey(Comparator.comparing(emp1 -> emp1.getName())))
 				.forEach(t -> System.out.println(t));
+		System.out.println("-----------------Name 1 reverse------------------");
+		emp.getEmpolyee().entrySet().stream()
+		.sorted(Map.Entry.comparingByKey(Comparator.comparing(Employee::getName).reversed()))
+		.forEach(t -> System.out.println(t));
 		System.out.println("------------+++NAME 2+++---------------------");
 		emp.getEmpolyee().entrySet().stream().sorted(Map.Entry.comparingByKey(Comparator.comparing(Employee::getName)))
 				.forEach(t -> System.out.println(t));
