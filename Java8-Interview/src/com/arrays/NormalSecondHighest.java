@@ -12,7 +12,6 @@ public class NormalSecondHighest {
 				largeNumber = arr[i];
 			} else if (arr[i] > secondNumber && arr[i] !=largeNumber) {
 				secondNumber = arr[i];
-				
 			}
 		}
 		System.out.println(largeNumber);
