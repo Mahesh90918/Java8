@@ -14,9 +14,11 @@ public class EmployeeTest {
 		list.add(new Employee(05, "mahesh", "mahesh@jhdh", Arrays.asList("76876867876", "45676574576")));
 		return list;
 
-	}public static void main(String[] args) {
-		EmployeeTest te=new EmployeeTest();
-		te.getAll().forEach(t->System.out.println(t));
+	}
+
+	public static void main(String[] args) {
+		EmployeeTest te = new EmployeeTest();
+		te.getAll().forEach(t -> System.out.println(t));
 	}
 
 }

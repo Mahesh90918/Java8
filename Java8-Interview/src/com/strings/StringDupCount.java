@@ -12,7 +12,7 @@ public class StringDupCount {
 		String str4 = "abcdefabccdeelq";
 		Map<String, Long> count = Arrays.stream(str4.split(""))
 				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-
+		System.out.println(count);
 		System.out.println("-----------Dupcount----------");
 		List<String> dupCount = count.entrySet().stream().filter(t -> t.getValue() > 1).map(Map.Entry::getKey)
 				.collect(Collectors.toList());

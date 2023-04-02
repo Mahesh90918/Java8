@@ -18,7 +18,7 @@ public class SecondHighestValue {
 	}
 
 	public static void main(String[] args) {
-		int[] a = { 10, 64, 30, 43, 60, 98, 98 };
+		int[] a = { 10, 64, 30, 43, 60, 98, 98,100,100 };
 		System.out.println(getSecondLargest(a));
 	}
 }

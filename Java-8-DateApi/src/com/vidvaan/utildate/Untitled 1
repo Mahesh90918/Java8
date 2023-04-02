@@ -1,0 +1,8 @@
+1.java.util.Date class represents date and time in java. It provides constructors and methods to deal with date and time in java.
+2.It implements Serializable, Cloneable and Comparable<Date> interface.
+3.util Date also provides other date-api are java.sql.Date, java.sql.Time and java.sql.Timestamp interfaces.Thease are child interfaces of the util date.
+After Calendar class, most of the constructors and methods of java.util.Date class has been deprecated.
+It intraduced JDK 1, it is a legacy class.
+
+draw backs of the date
+it is not thread safe and it wont support i18N, it doesn't have timezone.
