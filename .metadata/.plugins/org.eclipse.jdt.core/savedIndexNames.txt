@@ -1,0 +1,7 @@
+INDEX VERSION 1.132+C:\Users\edlav\Desktop\ASM_Project\Java8\.metadata\.plugins\org.eclipse.jdt.core
+2868695985.index
+1865797976.index
+1549014105.index
+1376721687.index
+2095159148.index
+1789064296.index
